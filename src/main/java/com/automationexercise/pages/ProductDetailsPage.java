@@ -4,6 +4,7 @@ import com.automationexercise.utility.Utility;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,9 +14,12 @@ public class ProductDetailsPage extends Utility {
         PageFactory.initElements(driver,this);
     }
 
+
+    @CacheLookup
     @FindBy(xpath = "//a[@href='#Women']")
     public WebElement womenCategory;
 
+    @CacheLookup
     @FindBy(id = "subscribe_email")
     public WebElement subscribeEmailBox;
 
@@ -28,5 +32,6 @@ public class ProductDetailsPage extends Utility {
         sendTextToElement(subscribeEmailBox, email);
         log.info("Entering the email in the field : " + subscribeEmailBox);
     }
+
 
 }
