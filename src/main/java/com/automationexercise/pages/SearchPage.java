@@ -16,23 +16,11 @@ public class SearchPage extends Utility {
 
 
     @CacheLookup
-    @FindBy(xpath = "//a[@href='#Women']")
-    public WebElement womenCategory;
-
-    @CacheLookup
-    @FindBy(id = "subscribe_email")
-    public WebElement subscribeEmailBox;
-
-    public void clickOnWomenCategory() {
-        log.info("Click on woman category." + womenCategory.toString());
-        clickOnElement(womenCategory);
+    @FindBy(xpath = "//h2[.='Searched Products']")
+    public WebElement searchedProductsText;
+    public String verifySearchedProductsText() {
+        log.info("Verify searched Products Text" + searchedProductsText.toString());
+        return getTextFromElement(searchedProductsText);
     }
-
-    public void enterSubscribeEmailBox(String email) {
-        sendTextToElement(subscribeEmailBox, email);
-        log.info("Entering the email in the field : " + subscribeEmailBox);
-    }
-
-
 
 }

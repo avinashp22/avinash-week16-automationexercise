@@ -10,30 +10,74 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CategoryProductPage extends Utility {
     private static final Logger log = LogManager.getLogger(CategoryProductPage.class.getName());
-    public CategoryProductPage(){
-        PageFactory.initElements(driver,this);
+
+    public CategoryProductPage() {
+        PageFactory.initElements(driver, this);
     }
-
-
 
     @CacheLookup
     @FindBy(xpath = "//a[@href='#Women']")
     public WebElement womenCategory;
 
-    @CacheLookup
-    @FindBy(id = "subscribe_email")
-    public WebElement subscribeEmailBox;
-
-    public void clickOnWomenCategory() {
-        log.info("Click on woman category." + womenCategory.toString());
+    public void clickwomenCategory() {
+        log.info("Click on Women category." + womenCategory.toString());
         clickOnElement(womenCategory);
     }
 
-    public void enterSubscribeEmailBox(String email) {
-        sendTextToElement(subscribeEmailBox, email);
-        log.info("Entering the email in the field : " + subscribeEmailBox);
+    @CacheLookup
+    @FindBy(xpath = "//div[@id='Women']//a[contains(text(),'Dress')]")
+    public WebElement clickOnwomenDress;
+
+    public void clickOnwomenDress() {
+        log.info("Click on Women Dress category." + clickOnwomenDress.toString());
+        clickOnElement(clickOnwomenDress);
     }
 
+    @CacheLookup
+    @FindBy(xpath = "//h2[normalize-space()='Women - Dress Products']")
+    public WebElement womenDressProductsText;
+
+    public String verifyWomenDressProductsText() {
+        log.info("Verify Womans Dress text." + womenDressProductsText.toString());
+        return getTextFromElement(womenDressProductsText);
+    }
+
+    @CacheLookup
+    @FindBy(xpath = "//a[normalize-space()='Men']")
+    public WebElement menCategory;
+
+    public void clickMenCategory() {
+        log.info("Click on Men category." + menCategory.toString());
+        clickOnElement(menCategory);
+    }
+
+    @CacheLookup
+    @FindBy(xpath = "//a[normalize-space()='Tshirts']")
+    public WebElement tshirtsCategory;
+
+    public void clickTshirtsCategory() {
+        log.info("Click on Tshirt category." + tshirtsCategory.toString());
+        clickOnElement(tshirtsCategory);
+    }
+
+    @CacheLookup
+    @FindBy(xpath = "//h2[normalize-space()='Men - Tshirts Products']")
+    public WebElement menTshirtsProductsText;
+
+    public String verifyMenTshirtsProductsText() {
+        log.info("Verify Men Tshirts text." + menTshirtsProductsText.toString());
+        return getTextFromElement(menTshirtsProductsText);
+    }
+
+
+    @CacheLookup
+    @FindBy(xpath = "//h2[.='Category']")
+    public WebElement categoryText;
+
+    public String verifyCategoryText() {
+        log.info("Verify Category text." + categoryText.toString());
+        return getTextFromElement(categoryText);
+    }
 
 
 }

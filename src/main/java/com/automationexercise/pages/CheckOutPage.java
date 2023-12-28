@@ -10,31 +10,31 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckOutPage extends Utility {
     private static final Logger log = LogManager.getLogger(CheckOutPage.class.getName());
-    public CheckOutPage(){
-        PageFactory.initElements(driver,this);
+
+    public CheckOutPage() {
+        PageFactory.initElements(driver, this);
     }
 
 
 
     @CacheLookup
-    @FindBy(xpath = "//a[@href='#Women']")
-    public WebElement womenCategory;
+    @FindBy(xpath = "//textarea[@name='message']")
+    public WebElement commentTextBox;
+
+    public void enterCommentTextBox(String commentText) {
+        log.info("Enter Comment Text." + commentTextBox);
+        sendTextToElement(commentTextBox, commentText);
+    }
+
 
     @CacheLookup
-    @FindBy(id = "subscribe_email")
-    public WebElement subscribeEmailBox;
+    @FindBy(xpath = "//a[normalize-space()='Place Order']")
+    public WebElement placeOrderButton;
 
-    public void clickOnWomenCategory() {
-        log.info("Click on woman category." + womenCategory.toString());
-        clickOnElement(womenCategory);
+    public void clickPlaceOrderButton() {
+        log.info("Click on place Order Button." + placeOrderButton.toString());
+        clickOnElement(placeOrderButton);
     }
-
-    public void enterSubscribeEmailBox(String email) {
-        sendTextToElement(subscribeEmailBox, email);
-        log.info("Entering the email in the field : " + subscribeEmailBox);
-    }
-
-
 
 
 }

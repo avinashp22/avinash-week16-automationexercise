@@ -350,4 +350,10 @@ public class Utility extends ManageBrowser {
     public static byte[] getScreenShot() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
+
+
+
+
+
+
 }
