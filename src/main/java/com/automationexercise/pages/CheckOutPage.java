@@ -15,26 +15,22 @@ public class CheckOutPage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
-
-
     @CacheLookup
     @FindBy(xpath = "//textarea[@name='message']")
     public WebElement commentTextBox;
+
+    @CacheLookup
+    @FindBy(xpath = "//a[normalize-space()='Place Order']")
+    public WebElement placeOrderButton;
 
     public void enterCommentTextBox(String commentText) {
         log.info("Enter Comment Text." + commentTextBox);
         sendTextToElement(commentTextBox, commentText);
     }
 
-
-    @CacheLookup
-    @FindBy(xpath = "//a[normalize-space()='Place Order']")
-    public WebElement placeOrderButton;
-
     public void clickPlaceOrderButton() {
         log.info("Click on place Order Button." + placeOrderButton.toString());
         clickOnElement(placeOrderButton);
     }
-
 
 }

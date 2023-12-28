@@ -18,6 +18,7 @@ public class SearchPage extends Utility {
     @CacheLookup
     @FindBy(xpath = "//h2[.='Searched Products']")
     public WebElement searchedProductsText;
+
     public String verifySearchedProductsText() {
         log.info("Verify searched Products Text" + searchedProductsText.toString());
         return getTextFromElement(searchedProductsText);

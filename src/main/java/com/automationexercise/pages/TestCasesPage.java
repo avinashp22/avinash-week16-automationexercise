@@ -19,20 +19,18 @@ public class TestCasesPage extends Utility {
     @FindBy(xpath = "//b[contains(text(),'Test Cases')]")
     public WebElement testCasesText;
 
+    @CacheLookup
+    @FindBy(xpath = "//a[normalize-space()='Test Cases']")
+    public WebElement testCases;
+
     public String verifyTestCasesText() {
         log.info("Verify Test Cases text." + testCasesText.toString());
         return getTextFromElement(testCasesText);
     }
 
-    @CacheLookup
-    @FindBy(xpath = "//a[normalize-space()='Test Cases']")
-    public WebElement testCases;
-
     public void clickTestCases() {
         log.info("Click on Test Cases" + testCases.toString());
         clickOnElement(testCases);
     }
-
-
 
 }

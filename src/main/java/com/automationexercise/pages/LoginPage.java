@@ -10,8 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends Utility {
     private static final Logger log = LogManager.getLogger(LoginPage.class.getName());
-    public LoginPage(){
-        PageFactory.initElements(driver,this);
+
+    public LoginPage() {
+        PageFactory.initElements(driver, this);
     }
 
 
@@ -19,48 +20,45 @@ public class LoginPage extends Utility {
     @FindBy(xpath = "//input[@data-qa='login-email']")
     public WebElement loginEmailBox;
 
+    @CacheLookup
+    @FindBy(xpath = "//input[@data-qa='login-password']")
+    public WebElement loginPasswordBox;
+
+    @CacheLookup
+    @FindBy(xpath = "//button[@data-qa='login-button']")
+    public WebElement loginButton;
+
+    @CacheLookup
+    @FindBy(xpath = "//p[contains(text(),'incorrect')]")
+    public WebElement incorrectText;
+
+    @CacheLookup
+    @FindBy(xpath = "//a[.=' Logout']")
+    public WebElement logoutButton;
+
     public void enterLoginEmailBoxText(String loginEmailBoxText) {
         log.info("Enter login Email Box Text." + loginEmailBox);
         sendTextToElement(loginEmailBox, loginEmailBoxText);
     }
-
-    @CacheLookup
-    @FindBy(xpath = "//input[@data-qa='login-password']")
-    public WebElement loginPasswordBox;
 
     public void enterloginPasswordBoxText(String loginPasswordBoxText) {
         log.info("Enter login Password Box Text." + loginPasswordBox);
         sendTextToElement(loginPasswordBox, loginPasswordBoxText);
     }
 
-    @CacheLookup
-    @FindBy(xpath = "//button[@data-qa='login-button']")
-    public WebElement loginButton;
-
     public void clickLoginButton() {
         log.info("Click login Button." + loginButton.toString());
         clickOnElement(loginButton);
     }
-
-
-
-
-    @CacheLookup
-    @FindBy(xpath = "//p[contains(text(),'incorrect')]")
-    public WebElement incorrectText;
 
     public String verifyIncorrectText() {
         log.info("Verify incorrect Text" + incorrectText.toString());
         return getTextFromElement(incorrectText);
     }
 
-    @CacheLookup
-    @FindBy(xpath = "//a[.=' Logout']")
-    public WebElement logoutButton;
     public void clickLogoutButton() {
         log.info("Click on logout Button" + logoutButton.toString());
         clickOnElement(logoutButton);
     }
-
 
 }
