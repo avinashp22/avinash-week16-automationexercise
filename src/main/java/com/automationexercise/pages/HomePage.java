@@ -25,11 +25,7 @@ public class HomePage extends Utility {
         return getTextFromElement(subscriptionText);
     }
 
-    public void scrollDownToSubscription() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", subscriptionText);
-        log.info("Scroll down to subscription");
-    }
+
 
     @CacheLookup
     @FindBy(id = "susbscribe_email")

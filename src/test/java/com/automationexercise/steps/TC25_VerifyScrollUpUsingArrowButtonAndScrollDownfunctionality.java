@@ -15,5 +15,6 @@ public class TC25_VerifyScrollUpUsingArrowButtonAndScrollDownfunctionality {
     @When("The user clicks orange arrow button")
     public void theUserClicksOrangeArrowButton() {
         new HomePage().clickScrollUpArrow();
+        new HomePage().scrollUpScript();
     }
 }

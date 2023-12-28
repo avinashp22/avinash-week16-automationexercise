@@ -889,3 +889,9 @@
 2023-12-28 12:12:561 INFO  HomePage :54 - Verify Success Subscribe text.[[ChromeDriver: chrome on windows (23feafb84ab724de97bfa1e80ad08041)] -> xpath: //div[@class='alert-success alert']]
 2023-12-28 12:12:101 INFO  HomePage :183 - Click on subscription arrow button : [[ChromeDriver: chrome on windows (1f4eea0f05ec6449c5bfc95b469decbf)] -> xpath: //i[@class='fa fa-arrow-circle-o-right']]
 2023-12-28 12:12:214 INFO  HomePage :54 - Verify Success Subscribe text.[[ChromeDriver: chrome on windows (1f4eea0f05ec6449c5bfc95b469decbf)] -> xpath: //div[@class='alert-success alert']]
+2023-12-28 20:12:701 INFO  HomePage :66 - Scroll down to Recommended Items
+2023-12-28 20:12:868 INFO  HomePage :24 - Verify Subscription text.[[ChromeDriver: chrome on windows (08e403b1e640cd882693f44ef89d0efc)] -> xpath: //h2[normalize-space()='Subscription']]
+2023-12-28 20:12:975 INFO  HomePage :85 - Click on Scroll Up Arrow.[[ChromeDriver: chrome on windows (08e403b1e640cd882693f44ef89d0efc)] -> xpath: //a[@id='scrollUp']]
+2023-12-28 20:12:745 INFO  HomePage :66 - Scroll down to Recommended Items
+2023-12-28 20:12:17 INFO  HomePage :24 - Verify Subscription text.[[ChromeDriver: chrome on windows (61b50a833425033497a331457c67d844)] -> xpath: //h2[normalize-space()='Subscription']]
+2023-12-28 20:12:163 INFO  HomePage :85 - Click on Scroll Up Arrow.[[ChromeDriver: chrome on windows (61b50a833425033497a331457c67d844)] -> xpath: //a[@id='scrollUp']]

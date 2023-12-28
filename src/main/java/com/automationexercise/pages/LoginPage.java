@@ -43,14 +43,6 @@ public class LoginPage extends Utility {
     }
 
 
-    @CacheLookup
-    @FindBy(id = "dismiss-button")
-    public WebElement dismissButton;
-
-    public void clickDismissButton() {
-        log.info("Click on dismiss Button" + dismissButton.toString());
-        clickOnElement(dismissButton);
-    }
 
 
     @CacheLookup

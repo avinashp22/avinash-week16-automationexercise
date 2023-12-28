@@ -213,15 +213,6 @@ public class RegisterPage extends Utility {
 
 
     @CacheLookup
-    @FindBy(id = "dismiss-button")
-    public WebElement dismissButton;
-    public void clickdismissButton() {
-        log.info("Click dismiss Button" + dismissButton.toString());
-        clickOnElement(dismissButton);
-    }
-
-
-    @CacheLookup
     @FindBy(xpath = "//a[contains(text(),'Logged in')]")
     public WebElement loggedInText;
     public String verifyloggedInText() {
