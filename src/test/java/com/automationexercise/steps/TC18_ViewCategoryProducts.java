@@ -14,12 +14,12 @@ public class TC18_ViewCategoryProducts {
 
     @When("The user clicks on Women category")
     public void theUserClicksOnWomenCategory() {
-        new CategoryProductPage().clickwomenCategory();
+        new CategoryProductPage().clickWomenCategory();
     }
 
     @And("The user clicks on Dress link under Women category")
     public void theUserClicksOnDressLinkUnderWomenCategory() {
-        new CategoryProductPage().clickOnwomenDress();
+        new CategoryProductPage().clickOnWomenDress();
     }
 
     @Then("Verify that category page is displayed and confirm text women Dress PRODUCTS")

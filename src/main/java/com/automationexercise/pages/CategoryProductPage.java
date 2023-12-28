@@ -19,18 +19,18 @@ public class CategoryProductPage extends Utility {
     @FindBy(xpath = "//a[@href='#Women']")
     public WebElement womenCategory;
 
-    public void clickwomenCategory() {
+    public void clickWomenCategory() {
         log.info("Click on Women category." + womenCategory.toString());
         clickOnElement(womenCategory);
     }
 
     @CacheLookup
     @FindBy(xpath = "//div[@id='Women']//a[contains(text(),'Dress')]")
-    public WebElement clickOnwomenDress;
+    public WebElement clickOnWomenDress;
 
-    public void clickOnwomenDress() {
-        log.info("Click on Women Dress category." + clickOnwomenDress.toString());
-        clickOnElement(clickOnwomenDress);
+    public void clickOnWomenDress() {
+        log.info("Click on Women Dress category." + clickOnWomenDress.toString());
+        clickOnElement(clickOnWomenDress);
     }
 
     @CacheLookup
@@ -38,7 +38,7 @@ public class CategoryProductPage extends Utility {
     public WebElement womenDressProductsText;
 
     public String verifyWomenDressProductsText() {
-        log.info("Verify Womans Dress text." + womenDressProductsText.toString());
+        log.info("Verify Woman's Dress text." + womenDressProductsText.toString());
         return getTextFromElement(womenDressProductsText);
     }
 
